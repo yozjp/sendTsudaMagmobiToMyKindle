@@ -58,7 +58,7 @@
 <ul>
 <li>Mac OS X 10.8 (で確認したという話で、それ以前でも使えるとは思います)</li>
 <li>メール(Mail.app) 6.5 (で確認したと言う話で、それ以前でも使えるとは思いますが、<a href="http://piyocast.com/as/archives/category/application_control/mailapp/">6.2あたりだとフィルタでAppleScriptが動かないという噂</a>もあるようです。正直、このあたりの事情はサポートできません) </li>
-<li>AppleScript エディタ 2.5.1 (で確認したry</li>
+<li>AppleScript エディタ 2.5.1 (で確認しry</li>
 </ul><h2>
 <a name="%E3%83%A1%E3%83%AB%E3%83%9E%E3%82%AC%E8%B3%BC%E8%AA%AD%E7%92%B0%E5%A2%83" class="anchor" href="#%E3%83%A1%E3%83%AB%E3%83%9E%E3%82%AC%E8%B3%BC%E8%AA%AD%E7%92%B0%E5%A2%83"><span class="octicon octicon-link"></span></a>メルマガ購読環境</h2>
 
@@ -82,53 +82,61 @@
 <a name="applescript%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%A8%E9%85%8D%E7%BD%AE" class="anchor" href="#applescript%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%A8%E9%85%8D%E7%BD%AE"><span class="octicon octicon-link"></span></a>AppleScriptファイルのダウンロードと配置</h2>
 
 <ol>
-<li>githubのこのページから、sendTsudaMagmobiToMyKindle.scpt をダウンロードします。</li>
+<li>このページ上部から、sendTsudaMagmobiToMyKindle.scpt をダウンロードします。3つくらいボタンがありますけど、「Download .zip」を選んでおけば間違いなし。</li>
 <li>sendTsudaMagmobiToMyKindle.scpt をホームディレクトリの Library/Application Scripts/com.apple.mail フォルダにコピーします。
 
 <ul>
-<li>ライブラリ(Library)フォルダは普通表示されないのですが、optionキーを押しながらFinderの「移動」メニューを開くと開くことができます。</li>
+<li>ライブラリ(Library)フォルダは普通表示されないのですが、optionキーを押しながらFinderの「移動」メニューを開くと開くことができます。<BR/>
+<img src="images/option+go.jpg">
+</li>
 <li>Application Scripts フォルダ、com.apple.mail フォルダが存在しない場合は、新規フォルダで作成してください。</li>
 </ul>
 </li>
+<li>で、こんな感じになります。<BR/>
+<img src="images/ApplicationScriptsFolder.jpg"></li>
 </ol><h2>
 <a name="applescript%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86" class="anchor" href="#applescript%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86"><span class="octicon octicon-link"></span></a>AppleScriptファイルの編集</h2>
 
 <p>個々人でお持ちのアカウントにあわせて、スクリプトの内容を少し修正する必要があります。</p>
 
 <ol>
-<li>sendTsudaMagmobiToMyKindle.scpt をダブルクリックします。
+<li>sendTsudaMagmobiToMyKindle.scpt をダブルクリックします。<BR/>
 　→AppleScript エディタが開きます。</li>
-<li>1行目、「property yakanID :」の後ろに、ダブルクォートで囲んで、夜間飛行のユーザIDを記入します。
+<li>1行目、「property yakanID :」の後ろに、ダブルクォートで囲んで、夜間飛行のユーザIDを記入します。<BR/>
 <code>property yakanID : "yakan"</code>
 </li>
-<li>2行目、「property yakanPass :」の後ろに、ダブルクォートで囲んで、夜間飛行のパスワードを記入します。
+<li>2行目、「property yakanPass :」の後ろに、ダブルクォートで囲んで、夜間飛行のパスワードを記入します。<BR/>
 <code>property yakanPass : "123456"</code>
 </li>
-<li>3行目、「property kindleMailAddress :」の後ろに、ダブルクォートで囲んで、Kindleデバイスへの送信アドレスを記入します。
+<li>3行目、「property kindleMailAddress :」の後ろに、ダブルクォートで囲んで、Kindleデバイスへの送信アドレスを記入します。<BR/>
 <code>property kindleMailAddress : "hogefuga_99@kindle.com"</code>
 </li>
+<li>で、こんな感じになります。<BR/>
+<img src="images/editingScript1.jpg"></li>
 <li>「ファイル」→「保存」で保存します。</li>
-<li>AppleScript エディタを終了します。</li>
+  <li>AppleScript エディタを終了します。</li>
 </ol><h2>
 <a name="%E3%83%A1%E3%83%BC%E3%83%ABmailapp%E3%81%AE%E8%A8%AD%E5%AE%9A" class="anchor" href="#%E3%83%A1%E3%83%BC%E3%83%ABmailapp%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="octicon octicon-link"></span></a>メール(Mail.app)の設定</h2>
 
 <ol>
-<li>メールの「環境設定...」を開きます。
+<li>メールの「環境設定...」を開きます。<BR/>
 　→環境設定ダイアログが開きます。</li>
-<li>「ルール」タブを開きます。
+<li>「ルール」タブを開きます。<BR/>
 　→環境設定ダイアログの内容が「ルール」の一覧表示になります。</li>
-<li>「ルールを追加」ボタンをクリックします。
+<li>「ルールを追加」ボタンをクリックします。<BR/>
 　シートが表示され、追加するルールの内容の設定を行えるようになります。</li>
 <li>「説明：」には「津田マガ自動処理」等を入力します。</li>
-<li>「以下の <strong>すべての</strong> 条件に一致した場合」を選び、「件名」として『 <strong>津田大介の「メディアの現場」</strong> 』を含む、「差出人」として『 <strong><a href="mailto:not_reply@yakan-hiko.com">not_reply@yakan-hiko.com</a></strong> 』を含む、を指定します。</li>
-<li>「以下の操作を実行：」に対して、『 <strong>AppleScriptを実行</strong> 』で、『 <strong>sendTsudaMagmobiToMyKindle.scpt</strong> 』を選びます。また、「＋」をクリックして『 <strong>ルールの評価を停止</strong> 』も追加しておきましょう。</li>
-<li>以上の設定ができたら「OK」をクリックしてルールの設定完了です。</li>
-<li>この「津田マガ自動処理」ルールは、できればリストの先頭近辺に置いて、他のルールと干渉しないようにしてください。
-
+<li>「以下の <strong>すべての</strong> 条件に一致した場合」を選び、「件名」として『 <strong>津田大介の「メディアの現場」</strong> 』を含む、「差出人」として『 <strong>not_reply@yakan-hiko.com</strong> 』を含む、を指定します。</li>
+<li>「以下の操作を実行：」に対して、『 <strong>AppleScriptを実行</strong> 』で、『 <strong>sendTsudaMagmobiToMyKindle.scpt</strong> 』を選びます。また、「＋」をクリックして『 <strong>ルールの評価を停止</strong> 』も追加しておきましょう。
 <ul>
-<li>このルールの対象となる津田マガメールは、他のルール、およびこのルール自身でも、フォルダを移動しないほうがいいみたいです。AppleScriptが処理すべきメールを見失ってしまって、処理ができないケースがある感じです。</li>
-</ul>
+<li>「AppleScriptを実行」の右のポップアップメニューに「sendTsudaMagmobiToMyIndke」が出てこない場合は、一度メール(Mail.app)を終了して、もう一度起動してみたらどうでしょう。</li>
 </li>
+</ul>
+<li>で、こんな感じになります。<BR/>
+<img src="images/MailRule.jpg"></li>
+<li>以上の設定ができたら「OK」をクリックしてルールの設定完了です。</li>
+<li>この「津田マガ自動処理」ルールは、できればリストの先頭近辺に置いて、他のルールと干渉しないようにしてください。<BR/>
+また、このルールの対象となる津田マガメールは、他のルール、およびこのルール自身でも、フォルダを移動しないほうがいいみたいです。AppleScriptが処理すべきメールを見失ってしまって、処理ができないケースがある感じです。</li>
 <li>環境設定ダイアログを閉じて設定終了です。</li>
 </ol><h1>
 <a name="%E5%8B%95%E4%BD%9C%E3%81%AE%E5%AE%9F%E9%9A%9B" class="anchor" href="#%E5%8B%95%E4%BD%9C%E3%81%AE%E5%AE%9F%E9%9A%9B"><span class="octicon octicon-link"></span></a>動作の実際</h1>
@@ -146,14 +154,15 @@
 
 <p>安全のため、作成したメールは自動的に送信までは行わず、下書きの状態で画面に留まります。手動で送信してください。しばらくするとお手持ちのKindleで電子書籍のかたちで津田マガが読めるようになるはずです。</p>
 
-<p>これでうまくいくことが確認できたら、スクリプトを少しいじることで、自動的にKindleへの送信まで行うようになり、究極のものぐさ環境が完成します。
-スクリプトの最後のほうの
+<p>これでうまくいくことが確認できたら、スクリプトを少しいじることで、自動的にKindleへの送信まで行うようになり、究極のものぐさ環境が完成します。<BR/>
+スクリプトの最後のほうの<BR/>
 <code>-- send -- eliminate '--' if you like to send mail automatically
-</code>
+</code><BR/>
 というところ、「send」の前の「--」を消すと、メール作成後勝手に送るようになります。</p>
+<p>このへん。<BR/>
+<img src="images/editingScript2.jpg">
+</p>
 
-<p><code>send    -- eliminate '--' if you like to send mail automatically
-</code></p>
         </section>
 
         <footer>
